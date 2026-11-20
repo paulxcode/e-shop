@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: 255 255 255;
+  --color-surface: 243 244 246;
+  --color-border: 229 231 235;
+  --color-text: 26 26 26;
+}
+
+.dark {
+  --color-bg: 15 23 42;
+  --color-surface: 30 41 59;
+  --color-border: 51 65 85;
+  --color-text: 241 245 249;
+}
+
+body {
+  background-color: rgb(var(--color-bg));
+  color: rgb(var(--color-text));
+}
+
+/* Override hardcoded bg-white in card components */
+.dark .bg-white,
+.dark .dark\:bg-surface-dark {
+  background-color: rgb(var(--color-surface));
+}
